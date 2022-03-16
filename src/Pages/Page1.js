@@ -5,19 +5,17 @@ import { Link } from "react-router-dom";
 import { INCREASE, DECREASE } from "../Store/entities/YOUR_REDUCER_NAME";
 
 class Page1 extends Component {
-  state = {};
-
   render() {
-    console.log(this.props);
+    const { INCREASE, DECREASE, count } = this.props;
     return (
       <div className="mx-auto bg-gray-100 text-center space-y-8">
         <h1>Counter with State</h1>
         <div className="flex gap-5 justify-center">
-          <button onClick={() => this.props.INCREASE()}>Increase</button>
-          <button onClick={() => this.props.DECREASE()}>Decrease</button>
+          <button onClick={() => INCREASE()}>Increase</button>
+          <button onClick={() => DECREASE()}>Decrease</button>
         </div>
 
-        <h2>{this.props.count}</h2>
+        <h2>{count}</h2>
 
         <Link className="mt-24 text-xl font-bold" to="/">
           Counter with State
