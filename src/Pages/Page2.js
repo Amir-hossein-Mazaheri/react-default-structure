@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from "react";
 
-function Page2() {
-  return (
-    <div>Page2</div>
-  )
+class Page2 extends Component {
+  state = {};
+  render() {
+    return <div>Page Two</div>;
+  }
 }
 
-export default Page2
+export default Page2;
